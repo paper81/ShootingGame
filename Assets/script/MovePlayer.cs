@@ -18,10 +18,8 @@ public class MovePlayer : GameScroll
 
     void Update()
     {
-        vel.x = Input.GetKey(KeyCode.D) ?  moveSpeed : vel.x;
-        vel.x = Input.GetKey(KeyCode.A) ? -moveSpeed : vel.x;
-        vel.y = Input.GetKey(KeyCode.W) ?  moveSpeed : vel.y;
-        vel.y = Input.GetKey(KeyCode.S) ? -moveSpeed : vel.y;
+        vel.x += Input.GetAxisRaw("Horizontal") * moveSpeed;
+        vel.y += Input.GetAxisRaw("Vertical") * moveSpeed;
         vel.x = transform.position.x > MainCamera.transform.position.x +8.25f ? -moveSpeed : vel.x;
         vel.x = transform.position.x < MainCamera.transform.position.x -8.25f ?  moveSpeed : vel.x;
         vel.y = transform.position.y > MainCamera.transform.position.y +4.65f ? -moveSpeed : vel.y;

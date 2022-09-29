@@ -27,6 +27,7 @@ public class Item : ItemStatus
             case ItemKinds.MaxHP:
                 Player.GetComponent<PlayerHP>().MaxHP += 2;
                 Player.GetComponent<PlayerHP>().SliderUpDate();
+                Player.GetComponent<PlayerHP>().Recovery(2);
                 break;
             case ItemKinds.CurrentHP:
                 Player.GetComponent<PlayerHP>().Recovery(5);
