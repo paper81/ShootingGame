@@ -22,7 +22,8 @@ public class MoveSharkTail : MonoBehaviour
         while (true)
         {
             yield return null;
-            transform.Rotate(rotate * Time.deltaTime);
+            //transform.Rotate(rotate * rotateSpeed * Time.deltaTime);
+            transform.eulerAngles += rotateSpeed * Time.deltaTime * Vector3.forward;
             if (ChangeAngle() > MaxRotate || ChangeAngle() < -MinRotate)
                 rotate *= -1;
         }

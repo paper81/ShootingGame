@@ -7,9 +7,12 @@ public class EnemyShot : MonoBehaviour
     public float repeatTime, shotNum, shotDir;
     public GameObject bullet, muzlle;
 
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(Shot());
+        if (collision.gameObject.CompareTag("MovePos"))
+        {
+            StartCoroutine(Shot());
+        }
     }
 
     IEnumerator Shot()
