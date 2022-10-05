@@ -6,12 +6,13 @@ public class MoveSharkTail : MonoBehaviour
 {
     public float rotateSpeed = 1, MaxRotate, MinRotate;
     Vector3 rotate;
+    bool IsUp = true;
     public float waitTime;
     Coroutine MoveCoroutine;
 
     void Start()
     {
-        rotate.z = rotateSpeed * 0.01f;
+        rotate = transform.localEulerAngles;
         //rotate.z = -(1 / (MaxRotate + MinRotate)) * rotateSpeed;
         MoveCoroutine = StartCoroutine(nameof(Move));
     }
@@ -22,10 +23,13 @@ public class MoveSharkTail : MonoBehaviour
         while (true)
         {
             yield return null;
-            //transform.Rotate(rotate * rotateSpeed * Time.deltaTime);
+            //transform.Rotate(rotateSpeed * Time.deltaTime * rotate);
             transform.eulerAngles += rotateSpeed * Time.deltaTime * Vector3.forward;
-            if (ChangeAngle() > MaxRotate || ChangeAngle() < -MinRotate)
-                rotate *= -1;
+            if ((transform.eulerAngles.z > MaxRotate && IsUp == true) || (transform.eulerAngles.z < -MinRotate && IsUp == false))
+            { 
+                rotateSpeed *= -1;
+                IsUp = !IsUp;
+            }
         }
     }
 
