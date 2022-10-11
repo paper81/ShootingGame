@@ -7,6 +7,7 @@ public class PlayerHP : HP
 {
     public Slider slider;
     public PlayerStatus status;
+    public Image gameOverImage;
 
     protected override void Start()
     {
@@ -28,7 +29,10 @@ public class PlayerHP : HP
         currentHP -= attack;
         SliderUpDate();
         if (currentHP <= 0)
+        {
+            
             StartCoroutine(DieProcess());
+        }
     }
 
     public void Recovery(int amount)
