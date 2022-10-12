@@ -88,7 +88,6 @@
     <Compile Include="Assets\script\Enemy\InsRock.cs" />
     <Compile Include="Assets\script\Enemy\ItemEnemy.cs" />
     <Compile Include="Assets\script\Enemy\ItemEnemyHP.cs" />
-    <Compile Include="Assets\script\Enemy\LoadScene.cs" />
     <Compile Include="Assets\script\Enemy\MoveBossArm.cs" />
     <Compile Include="Assets\script\Enemy\MoveBossLazer.cs" />
     <Compile Include="Assets\script\Enemy\MoveBossLazerArm2.cs" />
@@ -125,6 +124,7 @@
     <Compile Include="Assets\script\HP.cs" />
     <Compile Include="Assets\script\Item.cs" />
     <Compile Include="Assets\script\ItemStatus.cs" />
+    <Compile Include="Assets\script\LoadScene.cs" />
     <Compile Include="Assets\script\MoveCamera.cs" />
     <Compile Include="Assets\script\MovePlayer.cs" />
     <Compile Include="Assets\script\MovePlayerBullet.cs" />

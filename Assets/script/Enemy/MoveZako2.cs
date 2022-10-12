@@ -19,7 +19,7 @@ public class MoveZako2 : MonoBehaviour
     IEnumerator Move()
     {
         speed *= IsPosDown == true ? 1 : -1;
-        while ((transform.position.x - target.transform.position.x) > 5)
+        while (target != null &&(transform.position.x - target.transform.position.x) > 5)
         {
             yield return null;
             if(target == null)
@@ -28,10 +28,14 @@ public class MoveZako2 : MonoBehaviour
             }
         }
 
-        while ((transform.position.y > target.position.y && IsPosDown == false) ||
-                                (transform.position.y < target.position.y && IsPosDown == true))
+        while (target != null &&(transform.position.y > target.position.y && IsPosDown == false) ||
+               (transform.position.y < target.position.y && IsPosDown == true))
         {
             yield return null;
+            if (target == null)
+            {
+                yield break;
+            }
             MoveVertical();
                 
         }

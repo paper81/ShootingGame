@@ -30,9 +30,15 @@ public class PlayerHP : HP
         SliderUpDate();
         if (currentHP <= 0)
         {
-            
+            PlayerDie();
             StartCoroutine(DieProcess());
         }
+    }
+
+    void PlayerDie()
+    {
+        gameOverImage.gameObject.SetActive(true);
+        StopAllCoroutines();
     }
 
     public void Recovery(int amount)

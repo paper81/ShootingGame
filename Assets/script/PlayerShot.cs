@@ -5,12 +5,27 @@ using UnityEngine.UI;
 
 public class PlayerShot : MonoBehaviour
 {
-    public PlayerStatus status;
-    public Slider slider_Charge;
-    public GameObject chargeEffect;
-    public GameObject[] bullet;
-    public GameObject[] chargeBullet;
-    public GameObject[] muzzle;
+    [SerializeField]
+    PlayerStatus status;
+    [SerializeField]
+    Slider slider_Charge;
+    [SerializeField]
+    GameObject chargeEffect;
+    [SerializeField]
+    GameObject[] bullet;
+    [SerializeField]
+    GameObject[] chargeBullet;
+    [SerializeField]
+    GameObject[] muzzle;
+
+    [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip chargeSE;
+    [SerializeField]
+    AudioClip shotSE;
+    [SerializeField]
+    AudioClip chargeShotSE;
 
     GameObject chargeObj;
     float time;
@@ -32,6 +47,10 @@ public class PlayerShot : MonoBehaviour
             time += Time.deltaTime;
             slider_Charge.value = time / status.chargeTime;
             chargeObj.transform.position = muzzle[0].transform.position;
+            if(time > 0.2f)
+            {
+                audioSource.PlayOneShot(chargeSE);
+            }
         }
         else
         {
@@ -41,11 +60,18 @@ public class PlayerShot : MonoBehaviour
         if (Input.GetButtonUp("ShotButton"))
         {
             Destroy(chargeObj);
+            audioSource.Stop();
             slider_Charge.value = 0;
             if(time < status.chargeTime)
+            {
+                audioSource.PlayOneShot(shotSE);
                 Shot(bullet[status.bulletLevel]);
+            }
             if (time > status.chargeTime)
+            {
+                audioSource.PlayOneShot(chargeShotSE);
                 Shot(chargeBullet[status.bulletLevel]);
+            }
         }
     }
 
