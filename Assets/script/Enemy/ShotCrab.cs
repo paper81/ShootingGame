@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class ShotCrab : MonoBehaviour
 {
-    public GameObject bullet;
-    public float repeatTime;
+    [SerializeField]
+    GameObject bullet;
+    [SerializeField]
+    float repeatTime;
+    [SerializeField]
+    AudioClip shotSE;
+
+    [SerializeField]
+    AudioSource audioSource;
 
     void Start()
     {
@@ -14,6 +21,7 @@ public class ShotCrab : MonoBehaviour
 
     void Shot()
     {
+        audioSource.PlayOneShot(shotSE);
         Instantiate(bullet, transform.position, transform.rotation);
     }
 }

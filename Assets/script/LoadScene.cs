@@ -6,10 +6,16 @@ using Trisibo;
 
 public class LoadScene : MonoBehaviour
 {
-    public SceneField loadScene;
+    [SerializeField]
+    SceneField loadScene;
+    [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip cliclSE;
 
     public void OnClick()
     {
+        audioSource.PlayOneShot(cliclSE);
         Debug.Log(loadScene);
         SceneManager.LoadScene(loadScene.BuildIndex);
     }

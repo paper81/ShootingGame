@@ -47,7 +47,7 @@ public class PlayerShot : MonoBehaviour
             time += Time.deltaTime;
             slider_Charge.value = time / status.chargeTime;
             chargeObj.transform.position = muzzle[0].transform.position;
-            if(time > 0.2f)
+            if(time > 0.2f && audioSource.isPlaying == false)
             {
                 audioSource.PlayOneShot(chargeSE);
             }
