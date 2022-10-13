@@ -1784,7 +1784,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RootOrder: 3
+=======
+  m_RootOrder: 12
+>>>>>>> Stashed changes
 =======
   m_RootOrder: 12
 >>>>>>> Stashed changes
@@ -1824,7 +1828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 8
+=======
+      value: 3
+>>>>>>> Stashed changes
 =======
       value: 3
 >>>>>>> Stashed changes
@@ -3150,7 +3158,11 @@ Transform:
   - {fileID: 1257317900}
   m_Father: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RootOrder: 5
+=======
+  m_RootOrder: 10
+>>>>>>> Stashed changes
 =======
   m_RootOrder: 10
 >>>>>>> Stashed changes
@@ -3600,7 +3612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 10
+=======
+      value: 5
+>>>>>>> Stashed changes
 =======
       value: 5
 >>>>>>> Stashed changes
@@ -14179,7 +14195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 7
+=======
+      value: 2
+>>>>>>> Stashed changes
 =======
       value: 2
 >>>>>>> Stashed changes
@@ -14416,7 +14436,11 @@ RectTransform:
   - {fileID: 1329726383}
   m_Father: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RootOrder: 4
+=======
+  m_RootOrder: 11
+>>>>>>> Stashed changes
 =======
   m_RootOrder: 11
 >>>>>>> Stashed changes
@@ -14783,7 +14807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 9
+=======
+      value: 4
+>>>>>>> Stashed changes
 =======
       value: 4
 >>>>>>> Stashed changes
@@ -17956,7 +17984,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 14
+=======
+      value: 9
+>>>>>>> Stashed changes
 =======
       value: 9
 >>>>>>> Stashed changes
@@ -18553,7 +18585,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 11
+=======
+      value: 6
+>>>>>>> Stashed changes
 =======
       value: 6
 >>>>>>> Stashed changes
@@ -18800,7 +18836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 12
+=======
+      value: 7
+>>>>>>> Stashed changes
 =======
       value: 7
 >>>>>>> Stashed changes
@@ -19098,7 +19138,11 @@ Transform:
   - {fileID: 762418687}
   m_Father: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RootOrder: 0
+=======
+  m_RootOrder: 16
+>>>>>>> Stashed changes
 =======
   m_RootOrder: 16
 >>>>>>> Stashed changes
@@ -19125,7 +19169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 13
+=======
+      value: 8
+>>>>>>> Stashed changes
 =======
       value: 8
 >>>>>>> Stashed changes
@@ -19758,7 +19806,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RootOrder: 2
+=======
+  m_RootOrder: 13
+>>>>>>> Stashed changes
 =======
   m_RootOrder: 13
 >>>>>>> Stashed changes
@@ -19973,7 +20025,11 @@ Transform:
   - {fileID: 1354329878}
   m_Father: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_RootOrder: 1
+=======
+  m_RootOrder: 14
+>>>>>>> Stashed changes
 =======
   m_RootOrder: 14
 >>>>>>> Stashed changes
