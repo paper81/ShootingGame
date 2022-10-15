@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerShot : MonoBehaviour
 {
+
     [SerializeField]
     PlayerStatus status;
     [SerializeField]
@@ -29,6 +30,7 @@ public class PlayerShot : MonoBehaviour
 
     GameObject chargeObj;
     float time;
+    bool IsCharge;
 
     void Start()
     {
@@ -47,8 +49,9 @@ public class PlayerShot : MonoBehaviour
             time += Time.deltaTime;
             slider_Charge.value = time / status.chargeTime;
             chargeObj.transform.position = muzzle[0].transform.position;
-            if(time > 0.2f && audioSource.isPlaying == false)
+            if(time > 0.2f && IsCharge == false)
             {
+                IsCharge = true;
                 audioSource.PlayOneShot(chargeSE);
             }
         }
@@ -59,6 +62,7 @@ public class PlayerShot : MonoBehaviour
         }
         if (Input.GetButtonUp("ShotButton"))
         {
+            IsCharge = false;
             Destroy(chargeObj);
             audioSource.Stop();
             slider_Charge.value = 0;

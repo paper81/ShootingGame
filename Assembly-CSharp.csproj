@@ -130,6 +130,7 @@
     <Compile Include="Assets\script\MovePlayerBullet.cs" />
     <Compile Include="Assets\script\MoveSubForce.cs" />
     <Compile Include="Assets\script\PlayerHP.cs" />
+    <Compile Include="Assets\script\PlayerShot.cs" />
     <Compile Include="Assets\script\PlayerStatus.cs" />
     <Compile Include="Assets\script\ScrollControl.cs" />
     <Compile Include="Assets\script\ScrollEnemy.cs" />
