@@ -124,6 +124,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHP: 15
+  effectCount: 1
+  waitTime: 0
+  effectRange: 0
+  DieEffectObj: {fileID: 4618439904522232584, guid: 314ea9f467630df4e81cd830251eead6,
+    type: 3}
+  boxcollider: {fileID: 1790281792959355623}
 --- !u!114 &8367775470615730335
 MonoBehaviour:
   m_ObjectHideFlags: 0
