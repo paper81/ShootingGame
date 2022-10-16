@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ScrollEnemy : MonoBehaviour
 {
-    public float scrollSpeed;
+    [SerializeField]
+    float scrollSpeed;
+
     Vector2 pos;
 
     void Start()

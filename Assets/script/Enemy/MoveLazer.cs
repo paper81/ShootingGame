@@ -5,15 +5,19 @@ using UnityEngine;
 
 public class MoveLazer : Attack
 {
-    public float speed;
-    public bool IsstartUP = true;
+    [SerializeField]
+    protected float speed;
+    [SerializeField]
+    protected bool IsstartUP = true;
+    [SerializeField]
     protected float speedX, speedY;
+    [SerializeField]
     protected Vector2 pos;
     List<Vector2> originPos = new List<Vector2>();
-    
-
-    [SerializeField] EdgeCollider2D edgeCollider;
-    [SerializeField] TrailRenderer trailRenderer;
+    [SerializeField]
+    EdgeCollider2D edgeCollider;
+    [SerializeField]
+    TrailRenderer trailRenderer;
 
     void Start()
     {

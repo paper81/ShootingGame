@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveCamera : GameScroll
+public class MoveCamera : MonoBehaviour
 {
     [SerializeField]
     GameObject player;
-    protected override void Start()
+    [SerializeField]
+    float scrollSpeed;
+    [SerializeField]
+    float[] stopPos, stopTime;
+
+    int stopCount = 0;
+    Vector3 pos;
+
+    void Start()
     {
-        base.Start();
         pos = transform.position;
         StartCoroutine(Move());
     }
@@ -18,15 +25,17 @@ public class MoveCamera : GameScroll
         while(player != null)
         {
             yield return new WaitForEndOfFrame();
-            pos += Scroll();
+            if(transform.position.x > stopPos[stopCount])
+            {
+                if(stopTime[stopCount] == 0)
+                {
+                    stopTime[stopCount] = Mathf.Infinity;
+                }
+                yield return new WaitForSeconds(stopTime[stopCount]);
+                stopCount++;
+            }
+            pos += scrollSpeed * Time.deltaTime * Vector3.right;
             transform.position = pos;
-        }
-        
+        }        
     }
-
-    //void Update()
-    //{
-    //    pos += Scroll();
-    //    transform.position = pos;        
-    //}
 }

@@ -119,7 +119,6 @@
     <Compile Include="Assets\script\Enemy\ShotLazer.cs" />
     <Compile Include="Assets\script\Enemy\ShotSnake.cs" />
     <Compile Include="Assets\script\Enemy\SnakeBodyHP.cs" />
-    <Compile Include="Assets\script\GameScroll.cs" />
     <Compile Include="Assets\script\GetItem.cs" />
     <Compile Include="Assets\script\HP.cs" />
     <Compile Include="Assets\script\Item.cs" />
@@ -132,7 +131,6 @@
     <Compile Include="Assets\script\PlayerHP.cs" />
     <Compile Include="Assets\script\PlayerShot.cs" />
     <Compile Include="Assets\script\PlayerStatus.cs" />
-    <Compile Include="Assets\script\ScrollControl.cs" />
     <Compile Include="Assets\script\ScrollEnemy.cs" />
     <Compile Include="Assets\script\SubForceShot.cs" />
     <None Include="Assets\Unity-Scene-Field-master\ProjectSettings\ProjectVersion.txt" />

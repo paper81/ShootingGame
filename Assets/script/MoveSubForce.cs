@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class MoveSubForce : MonoBehaviour
 {
-    public GameObject player;
-    public int spam;
+    [SerializeField]
+    GameObject player;
+    [SerializeField]
+    GameObject parent;
+    [SerializeField]
+    int spam;
+
+    MovePlayer movePlayer;
     List<Vector2> vector2s = new List<Vector2>();
+
+    private void Start()
+    {
+        movePlayer = player.GetComponent<MovePlayer>();
+    }
 
     void FixedUpdate()
     {
-        if (!MovePlayer.IsMove || player == null)
+        if (movePlayer.IsMove() == false || player == null)
         {
             return;
         }
 
-        vector2s.Add(player.transform.position);
+        vector2s.Add(parent.transform.position);
 
         if(vector2s.Count - spam >= 0)
         {

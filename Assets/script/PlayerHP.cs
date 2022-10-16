@@ -5,23 +5,18 @@ using UnityEngine.UI;
 
 public class PlayerHP : HP
 {
-    public Slider slider;
-    public PlayerStatus status;
-    public Image gameOverImage;
+    [SerializeField]
+    Slider slider;
+    [SerializeField]
+    PlayerStatus status;
+    [SerializeField]
+    Image gameOverImage;
 
     protected override void Start()
     {
         base.Start();
         MaxHP = status.MaxHP;
         SliderUpDate();
-    }
-
-    private void Update()
-    {
-        if(transform.position.y < -9.5f)
-        {
-            Damage(100000);
-        }
     }
 
     public override void Damage(int attack)

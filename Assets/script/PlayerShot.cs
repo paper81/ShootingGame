@@ -47,7 +47,7 @@ public class PlayerShot : MonoBehaviour
         if (Input.GetButton("ShotButton"))
         {
             time += Time.deltaTime;
-            slider_Charge.value = time / status.chargeTime;
+            slider_Charge.value = time / status.ChargeTime;
             chargeObj.transform.position = muzzle[0].transform.position;
             if(time > 0.2f && IsCharge == false)
             {
@@ -66,15 +66,15 @@ public class PlayerShot : MonoBehaviour
             Destroy(chargeObj);
             audioSource.Stop();
             slider_Charge.value = 0;
-            if(time < status.chargeTime)
+            if(time < status.ChargeTime)
             {
                 audioSource.PlayOneShot(shotSE);
-                Shot(bullet[status.bulletLevel]);
+                Shot(bullet[status.BulletLevel]);
             }
-            if (time > status.chargeTime)
+            if (time > status.ChargeTime)
             {
                 audioSource.PlayOneShot(chargeShotSE);
-                Shot(chargeBullet[status.bulletLevel]);
+                Shot(chargeBullet[status.BulletLevel]);
             }
         }
     }
@@ -85,8 +85,9 @@ public class PlayerShot : MonoBehaviour
     /// <param name="bullet"></param>
     void Shot(GameObject bullet)
     {
-        for(int i = 0; i < status.muzzleLevel; i++)
+        for(int i = 0; i < status.MuzzleLevel; i++)
         {
+            //生成時の角度指定
             Instantiate(bullet, muzzle[i].transform.position, Quaternion.identity);
         }
     }

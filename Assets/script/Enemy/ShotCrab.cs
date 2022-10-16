@@ -14,14 +14,17 @@ public class ShotCrab : MonoBehaviour
     [SerializeField]
     AudioSource audioSource;
 
-    void Start()
-    {
-        InvokeRepeating(nameof(Shot), 0, repeatTime);
-    }
-
     void Shot()
     {
         audioSource.PlayOneShot(shotSE);
         Instantiate(bullet, transform.position, transform.rotation);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("MovePos"))
+        {
+            InvokeRepeating(nameof(Shot), 0, repeatTime);
+        }
     }
 }

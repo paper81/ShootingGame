@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class HP : MonoBehaviour
 {
-    public int MaxHP;
-    public uint effectCount;
-    public float waitTime;
-    public float effectRange;
-    public GameObject DieEffectObj;
-    public Collider2D boxcollider;
+    [SerializeField]
+    protected int MaxHP;
+    [SerializeField]
+    protected uint effectCount;
+    [SerializeField]
+    protected float waitTime;
+    [SerializeField]
+    protected float effectRange;
+    [SerializeField]
+    protected GameObject DieEffectObj;
+    [SerializeField]
+    protected Collider2D boxcollider;
+
     Vector2 effectArea;
     protected int currentHP;
     bool IsDie = false;
@@ -28,6 +35,11 @@ public class HP : MonoBehaviour
             IsDie = true;
             StartCoroutine(DieProcess());
         }
+    }
+
+    public void UPMaxHP(int up)
+    {
+        MaxHP += up;
     }
 
     protected virtual IEnumerator DieProcess()
