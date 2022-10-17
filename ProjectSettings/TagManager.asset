@@ -16,6 +16,7 @@ TagManager:
   - SnakeHome
   - wall
   - floor
+  - EventSystem
   layers:
   - Default
   - TransparentFX

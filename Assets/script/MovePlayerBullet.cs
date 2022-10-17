@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class MovePlayerBullet : MonoBehaviour
 {
-    public float speed;
-    Vector2 pos;
+    [SerializeField]
+    float speed;
+    [SerializeField]
+    Rigidbody2D rb2;
+
     void Start()
     {
-        pos = transform.position;
-    }
-    void Update()
-    {
-        pos.x += speed  * Time.deltaTime;
-        transform.position = pos;
+        rb2.AddForce(transform.right * speed, ForceMode2D.Impulse);
     }
 }

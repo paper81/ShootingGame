@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class ShotCrab : MonoBehaviour
 {
-    public GameObject bullet;
-    public float repeatTime;
+    [SerializeField]
+    GameObject bullet;
+    [SerializeField]
+    float repeatTime;
+    [SerializeField]
+    AudioClip shotSE;
 
-    void Start()
-    {
-        InvokeRepeating(nameof(Shot), 0, repeatTime);
-    }
+    [SerializeField]
+    AudioSource audioSource;
 
     void Shot()
     {
+        audioSource.PlayOneShot(shotSE);
         Instantiate(bullet, transform.position, transform.rotation);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("MovePos"))
+        {
+            InvokeRepeating(nameof(Shot), 0, repeatTime);
+        }
     }
 }

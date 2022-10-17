@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class SubForceShot : MonoBehaviour
 {
-    public GameObject bullet;
-    public float directionTime;
-    float time = 0;
+    [SerializeField]
+    GameObject bullet;
+    [SerializeField]
+    float directionTime;
 
-    void Update()
+    void Start()
     {
-        time += Time.deltaTime;
-        if(Input.GetButtonDown("ShotButton") && time > directionTime)
+        StartCoroutine(Shot());
+    }
+
+    IEnumerator Shot()
+    {
+        while (true)
         {
+            yield return new WaitForSeconds(directionTime);
+            yield return new WaitUntil(() => Input.GetButtonDown("ShotButton"));
             Instantiate(bullet, transform.position, Quaternion.identity);
-            time = 0;
         }
     }
 
-    public void BulletUpGrade(GameObject bullet)
+    public void BulletUpGrade(GameObject Bullet)
     {
-        this.bullet = bullet;
+        bullet = Bullet;
     }
 }

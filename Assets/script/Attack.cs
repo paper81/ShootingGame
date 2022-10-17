@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public int attack;
-    public string target;
+    [SerializeField]
+    protected int attack;
+
+    [SerializeField]
+    protected string target;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(target))
+        if (collision.CompareTag(target))
         {
             collision.gameObject.GetComponent<HP>().Damage(attack);
         }

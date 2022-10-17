@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class BossLazerHP : HP
 {
-    public Transform core;
-    public GameObject[] cores;
-    public GameObject[] arms;
+    [SerializeField]
+    Transform core;
+    [SerializeField]
+    GameObject[] cores;
+    [SerializeField]
+    GameObject[] arms;
+
     GameObject coreObj;
 
     protected override void Start()
@@ -31,7 +35,6 @@ public class BossLazerHP : HP
         if (currentHP <= 0)
         {
             StartCoroutine(DieProcess());
-
         }        
     }
 

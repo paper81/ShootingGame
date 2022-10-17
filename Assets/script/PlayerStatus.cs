@@ -4,8 +4,21 @@ using UnityEngine;
 
 public class PlayerStatus : ItemStatus
 {
-    public int bulletLevel, muzzleLevel, MaxHP, subForceCount;
-    public float chargeTime;
+    [SerializeField]
+    int bulletLevel;
+    public int BulletLevel => bulletLevel;
+    [SerializeField]
+    int muzzleLevel;
+    public int MuzzleLevel => muzzleLevel;
+    [SerializeField]
+    int maxHP;
+    public int MaxHP => maxHP;
+    [SerializeField]
+    int subForceCount;
+    public int SubForceCount => subForceCount;
+    [SerializeField]
+    float chargeTime;
+    public float ChargeTime => chargeTime;
 
     public GameObject[] subForce;
 
